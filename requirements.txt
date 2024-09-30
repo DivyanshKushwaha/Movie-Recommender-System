@@ -54,7 +54,7 @@ pyarrow==17.0.0
 pydeck==0.9.1
 Pygments 
 pyparsing==3.1.4
-python-dateutil /work
+python-dateutil 
 pytz==2024.2
 pywin32==305.1
 pyzmq 
