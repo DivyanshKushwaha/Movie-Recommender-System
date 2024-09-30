@@ -56,7 +56,6 @@ Pygments
 pyparsing==3.1.4
 python-dateutil 
 pytz==2024.2
-pywin32==305.1
 pyzmq 
 referencing==0.35.1
 regex==2024.9.11
