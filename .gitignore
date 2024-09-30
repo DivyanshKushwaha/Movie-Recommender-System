@@ -163,3 +163,5 @@ cython_debug/
 recommender
 similarity.pkl
 .similarity.pkl
+similarity
+.similaritysimilarity.pkl
