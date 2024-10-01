@@ -18,7 +18,7 @@ Flask
 fonttools
 gitdb
 GitPython
-idnamportlib_metadata 
+importlib_metadata 
 importlib_resources
 ipykernel 
 ipython 
@@ -36,7 +36,7 @@ MarkupSafe
 matplotlib
 matplotlib-inline 
 mdurl
-narwhals
+narwhal
 nest_asyncio 
 nltk
 numpy
@@ -56,7 +56,7 @@ pyparsing
 python-dateutil 
 pytzyzmq 
 referencing
-regex1
+regex
 requests
 rich
 rpds-py
@@ -73,7 +73,8 @@ tornado
 tqdm
 traitlets 
 typing_extensions 
-tzdatarllib3
+tzdata
+urllib3
 watchdog
 wcwidth
 Werkzeug
