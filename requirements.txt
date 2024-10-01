@@ -16,8 +16,8 @@ decorator
 executing 
 Flask
 fonttools
-gitdb1
-GitPython3
+gitdb
+GitPython
 idnamportlib_metadata 
 importlib_resources
 ipykernel 
