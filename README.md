@@ -3,6 +3,9 @@
 
 This project builds a **Movie Recommender System** using **Natural Language Processing (NLP)** techniques like **CountVectorizer** and **PorterStemmer**. The application is developed using **Streamlit** and deployed on an **Amazon EC2** server for real-time recommendations.
 
+
+![movie](https://github.com/user-attachments/assets/e51faf13-6de5-47a6-bb1a-a5ca56cb2e05)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
