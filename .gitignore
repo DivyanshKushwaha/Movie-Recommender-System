@@ -165,3 +165,4 @@ similarity.pkl
 movies.pkl
 movie_dict.pkl
 data/
+.dockerignore
