@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommender System</h1>
+        <form id="recommendation-form">
+            <label for="movie-input">Search for a movie:</label>
+            <input type="text" id="movie-input" name="movie_name" placeholder="Enter a movie name" required>
+            <button type="submit">Show Recommendations</button>
+        </form>
+        <div id="recommendations" class="recommendations">
+            <!-- Recommendations will appear here -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        // Autocomplete for the movie search bar
+        $(function() {
+            const movieTitles = {{ movies | tojson }};
+            $("#movie-input").autocomplete({
+                source: movieTitles
+            });
+        });
+
+        // Handle form submission
+        $("#recommendation-form").on("submit", function(event) {
+            event.preventDefault();
+            const movieName = $("#movie-input").val();
+
+            // Send a POST request to fetch recommendations
+            $.ajax({
+                url: "/recommend",
+                method: "POST",
+                data: { movie_name: movieName },
+                success: function(response) {
+                    const recommendationsDiv = $("#recommendations");
+                    recommendationsDiv.empty();
+
+                    response.names.forEach((name, index) => {
+                        const movieDiv = $(`
+                            <div class="movie">
+                                <h2>${name}</h2>
+                                <img src="${response.posters[index]}" alt="${name} poster">
+                            </div>
+                        `);
+                        recommendationsDiv.append(movieDiv);
+                    });
+                },
+                error: function() {
+                    alert("Failed to fetch recommendations. Please try again.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

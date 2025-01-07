@@ -162,4 +162,6 @@ cython_debug/
 #.idea/
 .recommender
 similarity.pkl 
-
+movies.pkl
+movie_dict.pkl
+data/
