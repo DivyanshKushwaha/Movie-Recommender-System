@@ -1,0 +1,6 @@
+__pycache__
+.recommender
+.idea/
+model.ipynb
+tmdb_5000_credicts.csv
+tmdb_5000_movies.csv
