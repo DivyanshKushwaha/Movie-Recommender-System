@@ -69,11 +69,16 @@ To run the app on your local machine:
 streamlit run app.py
 ```
 
-### Deploying on Amazon EC2
+### Run app with Docker 
 
-1. **Launch an EC2 Instance**:
-   - Choose Ubuntu as the operating system.
-   - Configure security groups to allow HTTP and HTTPS traffic.
+1. **Install docker desktop**:
+   - Create account on dockerhub
+   - Login in dockerhub in powershell.
+   ```bash 
+   docker login -u <username>
+   (Enter password)
+   ```
+   
 
 2. **Connect Instance**:
    ```bash
