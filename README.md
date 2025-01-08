@@ -78,34 +78,23 @@ streamlit run app.py
    docker login -u <username>
    (Enter password)
    ```
-   
 
-2. **Connect Instance**:
+
+2. **Pull Image**:
    ```bash
-   ssh -i "your-key.pem" ubuntu@your-ec2-instance-public-ip
+   docker pull jatin723/recommendation-app
    ```
 
-3. **Install Python and Streamlit on EC2**:
+3. **Run the Image in container**:
    ```bash
-   sudo apt update
-   sudo apt install python3-pip
-   pip3 install streamlit
+   docker run -d --name <container-name> -p 5000:5000 jatin723/recommendation-app
    ```
 
-4. **Transfer the Project to EC2**:
-   - Use SCP to copy the project folder to the EC2 instance:
+4. **Access the app in browser on**:
    ```bash
-   scp -i "your-key.pem" -r ./movie-recommender-system ubuntu@your-ec2-instance-public-ip:~/.
+   localhost:5000
    ```
 
-5. **Run the Streamlit App on EC2**:
-   ```bash
-   cd movie-recommender-system
-   streamlit run app.py --server.port 80
-   ```
-
-6. **Access the App**:
-   Open your browser and go to `http://your-ec2-instance-public-ip` to access the Movie Recommender System.
 
 ## Project Structure
 
