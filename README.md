@@ -136,9 +136,9 @@ movie-recommender-system
 3. **Similarity Calculation**: Use cosine similarity to calculate how close one movie's description is to another.
 4. **Recommendation**: Based on the cosine similarity scores, recommend the top N similar movies to the user.
 
-## Deployment on Amazon EC2
+## Building Image and pushing it to Dockerhub
 
-This project is deployed on an **Amazon EC2** instance. The app is accessible over the web and provides movie recommendations in real-time. Ensure that your EC2 instance has ports 80 and 443 open in the security groups for public access.
+This project is pushed on dockerhub as an image for public access. Anyone can download the image by given instructions above and run it on their local machine.
 
 ## Usage
 
