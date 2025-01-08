@@ -99,19 +99,25 @@ streamlit run app.py
 ## Project Structure
 
 ```
-movie-recommender-system/
-│
-├── tmdb_5000_credits.csv       # Dataset containing credits and description of movies
-|── tmdb_5000_movies.csv        # Dataset containing movies 
-│                
-├── app.py                      # Streamlit app entry point
-├── recommender                 # Environment conatining packages and modules 
-├── requirements.txt            # Dependencies
-└── README.md                   # Project documentation          
-├── movies.pkl                  # Pickle file containing movies 
-├── movie_dict.pkl              # Movies dictionary pickle file
-├── similarity.pkl              # Pickle file containing similar properties among movies 
-└── README.md                   # Project documentation
+movie-recommender-system  
+      │__ data  
+      |     │__ tmdb_5000_credits.csv      # Dataset containing movie credits information.  
+      |     │__ tmdb_5000_movies.csv       # Dataset containing movie details.  
+      │__ static  
+      |     │__ styles.css                 # CSS file for styling the web application.  
+      ├── templates  
+      |     │__ index.html                 # HTML template for the application's main page.  
+      │__ recommender                      # Python virtual environment files
+      │__ requirements.txt                 # Dependencies required for the project.  
+      │__ README.md                        # Project documentation and overview.  
+      │__ Dockerfile                       # Instructions to containerize the application.  
+      │__ app.py                           # Main Python file to run the web application.  
+      │__ model.ipynb                      # Jupyter Notebook for model development.  
+      │__ movies.pkl                       # Pickle file for processed movie data.  
+      │__ movie_dict.pkl                   # Pickle file containing the movie dictionary.  
+      │__ similarity.pkl                   # Pickle file storing similarity metrics.  
+      
+
 ```
 
 ## Data Preprocessing
