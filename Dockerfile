@@ -1,5 +1,5 @@
 # Use a lightweight Python 3.10 image
-FROM python:3.10-slim
+FROM python:3.10-slim-buster
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -18,3 +18,6 @@ EXPOSE 5000
 
 # Command to run the Flask app
 CMD ["python", "app.py"]
+
+
+
