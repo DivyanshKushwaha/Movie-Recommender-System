@@ -85,12 +85,12 @@ streamlit run app.py
 
 2. **Pull Image**:
    ```bash
-   docker pull jatin723/recommendation-app
+   docker pull jatin723/movie-recommendation:v3
    ```
 
 3. **Run the Image in container**:
    ```bash
-   docker run -d --name <container-name> -p 5000:5000 jatin723/recommendation-app
+   docker run -d --name <container-name> -p 5000:5000 jatin723/movie-recommendation:v3
    ```
 
 4. **Access the app in browser on**:
