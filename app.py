@@ -43,7 +43,9 @@ def recommend(movie):
 @app.route('/')
 def index():
     """Render the homepage with the list of movies."""
-    return render_template('index.html', movies=list(movies['title'].values))
+    # Sort movies alphabetically
+    sorted_movies = sorted(list(movies['title'].values))
+    return render_template('index.html', movies=sorted_movies)
 
 
 @app.route('/recommend', methods=['POST'])
